@@ -66,13 +66,14 @@ module.exports = {
       size:20,
       required: true
     },
-    pets: {
+    
+    locales: {
       collection: 'Local',
       via: 'owner'
     },
-    pets: {
+    resenas: {
       collection: 'Resena',
-      via: 'owner'
+      via: 'idusuario'
     }
   }
 };

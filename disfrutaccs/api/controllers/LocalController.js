@@ -30,10 +30,9 @@ module.exports = {
     Local.findOne({id: req.param('id')}).exec(function(err,resultado){
     
     if (err) {return res.serverError(err);}
-	res.view({Local:resultado});
 
 
-    /*Resenas.find({idlocal:resultado.id}).exec(function(err,resultadoresena){
+    Resena.find({idlocal:resultado.id}).exec(function(err,resultadoresena){
 
             if(resultadoresena === undefined){
             return res.view({Local:resultado}); }
@@ -42,7 +41,7 @@ module.exports = {
 
                 resultado.resenas = resultadoresena;
                 res.view({Local:resultado});}
-                });*/
+                });
 
               
          

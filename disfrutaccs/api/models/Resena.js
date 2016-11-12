@@ -18,11 +18,6 @@ module.exports = {
      Comentario: {
       type: 'text'
     },
-    
-    owner: {
-    model:'Usuario',
-      type: 'string'
-    },
 
     idusuario: {
     model:'Usuario'

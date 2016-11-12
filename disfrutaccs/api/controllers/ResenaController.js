@@ -39,6 +39,7 @@ module.exports = {
                              res.redirect ('/local/mostrar/'+resena.idlocal);
                          });
 
+             
             /*Usuario_natural.findOne({Alias:req.param('Nombre')}).exec(function(err, resultado){
                 
 
