@@ -116,3 +116,7 @@ npm-debug.log
 nbproject
 .idea
 .node_history
+config/connections.js
+config/connections.js
+*.dockerignore
+node_modules/sails-mysql/README.md

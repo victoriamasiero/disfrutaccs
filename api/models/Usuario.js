@@ -32,7 +32,7 @@ module.exports = {
       type: 'date'
     },
     Edad: {
-      type: 'integer'
+      type: 'integer',
     },
     Indentificador: {
       type: 'boolean'
@@ -48,32 +48,18 @@ module.exports = {
       size:45,
       unique: true
     },
-    Sexo: {
-      type: 'string',
-      size:45,
-    },
-    Latitud: {
-      type: 'float'
-    },
-    Longitud: {
-      type: 'float'
-    },
-    Presupuesto: {
-      type: 'float'
-    },
       clave: {
       type: 'string',
       size:20,
       required: true
     },
-    pets: {
-      collection: 'Local',
+    pet: {
+      collection:'Natural',
       via: 'owner'
     },
     pets: {
-      collection: 'Resena',
+      collection: 'Actividad',
       via: 'owner'
     }
-  }
+  } 
 };
-
