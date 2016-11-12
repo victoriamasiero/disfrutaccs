@@ -1,0 +1,101 @@
+ <!DOCTYPE html>
+<html>
+
+<head>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="assets/styles/main.css">
+
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Pacifico" />
+
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+</head>
+<body>
+
+
+<nav class="se-gris padding-largo lato mediano">
+<ul class="no lista" id="no-lista">
+
+  <li  > <a href="http://localhost:1337/"> <b>DisfrutaCcs </b></a> </li>
+
+</ul>
+</nav>
+
+
+  <form action="/Local/create" method="POST" >
+
+  <div align="center">
+
+
+  <h1 class="pacifico verde">Registro de Local</h1>
+  <hr>
+
+   <input type='hidden' name='owner' value='<%=Usuario.id%> ' >
+   <h2 class="lato mediano"> Local de:  <b><%= Usuario.Nombre %> </b> </h2>
+
+   <br>
+
+   <label for="name" class="lato"> Nombre </label >
+   <br>
+
+   
+   <input type="text" class="text-center lato" placeholder=" " name="Nombre" size="20" maxlength="45" >
+
+   <br/>
+   <br/>
+   
+   <label for="name" class="lato">Edad minima de ingreso</label ><br/>
+
+   <input type="text" class="text-center" name="Edad_minima" size="20" maxlength="3" ><br />
+   <br/>
+
+
+   <label for="name" class="lato">Tipo de local</label ><br/>
+
+   <input type="radio" class="lato" placeholder="Gastronomico" name="Tipodelocal" value="Gastronomico"/> Gastronomico
+   <input type="radio" class="lato" placeholder="Entretenimiento" name="Tipodelocal" value="Entretenimiento"/> Entretenimiento
+
+   
+   <br/>
+   <br>
+
+   <label for="name" class="lato">Precio base</label ><br />
+
+   <input type="text" class="text-center" placeholder=" " name="Preciobase" size="20" maxlength="45" />
+   <br>
+   <br>
+   <label for="name" class="lato">Telefono</label ><br />
+   <input type="text" class="text-center" placeholder=" " name="Telefono" size="20" maxlength="45" />
+   <br>
+   <br>
+
+
+   <label for="name" class="lato">Direccion</label ><br />
+   <textarea name="Direccion" class= "lato" placeholder= " " cols="40" rows="4"></textarea>
+    <br>
+    <br>
+
+   <script type="text/javascript" src="https://form.jotformz.com/jsform/62823544695667"></script>
+   <label for="name" class="lato "> Ubicacion </label >
+   <br/>
+   <input type="text" class="text-center lato" placeholder="Latitud" name="Latitud" size="20" maxlength="20" ><br />
+   <br/>
+   <input type="text" class="text-center lato" placeholder="Longitud" name="Longitud" size="20" maxlength="20" ><br />
+   <br/>
+
+   <br/>
+
+   <div align = "center">
+   
+   <input type="submit" class="lato" value="Registrar local" action="/Local/registrar"> 
+  
+   </div>
+
+   <br/>
+  
+   <div>
+</form>
+</body>
+</html>

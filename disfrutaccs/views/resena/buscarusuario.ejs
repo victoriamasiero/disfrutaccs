@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="assets/styles/main.css">
+
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Pacifico" />
+
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+<title> DisfrutaCcs </title>	
+
+</head>
+
+<body>
+
+<nav class="se-gris padding-largo lato mediano">
+<ul class="no lista" id="no-lista">
+
+  <li> <a href="http://localhost:1337/"> <b>DisfrutaCcs </b></a> </li>
+
+</ul>
+</nav>
+<div align="center">
+
+<form action = "/Resena/nueva" method= "POST">
+<h1 class="pacifico grande verde"> Esta seguro que desea publicar este comentario? </h1>
+<hr>
+
+<h4 class = "lato "> Id local </h1>
+<input value= "<%=  Resena.idlocal %>" type="text" name="idlocal" class="lato text-center"><br />
+
+<h4 class = "lato "> Id usuario </h1>
+<input value= "<%=  Resena.id %>" type="text" name="idusuario" class="lato text-center"><br />
+
+<h4 class = "lato "> Comentario </h1>
+<input value= "<%=  Resena.Comentario %>" type="text" name="Comentario" class="lato text-center"><br />
+
+<br>
+<input type="submit" value = "Aceptar" class="lato">
+
+
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

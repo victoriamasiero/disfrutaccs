@@ -6,8 +6,31 @@
  */
 
 module.exports = {
-
+  connection: 'mysql',
   attributes: {
+    
+    Puntaje: {
+      type: 'integer'
+    },
+    Fecha_resena: {
+      type: 'date'
+    },
+     Comentario: {
+      type: 'text'
+    },
+    
+    owner: {
+    model:'Usuario',
+      type: 'string'
+    },
+
+    idusuario: {
+    model:'Usuario'
+    },
+    
+    idlocal: {
+    model:'Local'
+    }
 
   }
 };

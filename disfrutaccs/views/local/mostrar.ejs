@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+table {
+
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+</style>
+	
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="assets/styles/main.css">
+
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Pacifico" />
+
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+<title> DisfrutaCcs </title>
+
+</head>
+
+<body>
+
+<nav class="se-gris padding-largo lato mediano">
+<ul class="no lista" id="no-lista">
+
+  <li  > <a href="http://localhost:1337/"> <b>DisfrutaCcs </b></a> </li>
+
+</ul>
+</nav>
+
+<section>
+<div align="center">
+
+<article>
+<div class="col-md-6 inline-block">
+<h1 class= "pacifico verde grande"><%= Local.Nombre %></h1>
+<hr>
+
+<h2 class="lato "> Tipo de local: </h1>
+
+<h2 class = "lato mediano"> <b><%= Local.Tipodelocal %></b></h1>
+
+<h2 class="lato "> Edad minima de ingreso: </h1>
+
+<h2 class = "lato mediano"> <b><%= Local.Edad_minima %></b></h1>
+
+<h2 class="lato "> Precio Base: </h1>
+
+<h2 class = "lato mediano"> <b> BsF. <%= Local.Preciobase %></b></h1>
+
+<h2 class="lato "> Direccion: </h1>
+
+<h2 class = "lato mediano"> <b> <%= Local.Direccion %></b></h1>
+
+
+<form action="/resena/buscarusuario">
+<input type='hidden' name='idlocal' value='<%=Local.id%> ' >
+
+  <h2 class="lato"> Comentario: </h2>
+  <br>
+  <textarea name= "Comentario" class= "lato" placeholder= "Deje su comentario aqui.." cols="40" rows="4"></textarea>
+  <br>
+  <br>
+  <input type="text" class="text-center" placeholder="Nombre de usuario" name = "Nombre" size="10" maxlength="45" >
+
+  <input type="text" class="text-center espacio-derecha" placeholder="Clave" name = "Clave" size="10" maxlength="15" >
+  <br>
+
+  <br>
+  <input type="submit" value="Comentar">
+  <br>
+</form>
+</div>
+</article>
+
+
+<article>
+	
+  <div class="col-md-6 inline-block">
+
+
+<h5 class= "pacifico grande verde"> Resenas </h5>
+<br>
+<table>
+<tr> 
+	<th class="lato text-center"> Nombre de usuario </th>
+	<th class="lato text-center"> Comentario </th>
+
+</tr>
+
+<%_.each (Local.resenas, function(Resena){ %>
+
+<tr data-id= "<%= Local.Resenas.id%>" data-model="Resena">
+<td class="lato "><%= Resena.idusuario %></td>
+
+<td class="lato "><%= Resena.Comentario %></td>
+
+</tr>
+
+<% }) %>
+</table>
+
+
+</div>
+
+
+</article>
+
+
+</div>
+</section>
+</body>
+</html>
+
+
+
+

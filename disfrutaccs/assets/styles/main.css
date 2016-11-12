@@ -8,6 +8,10 @@ img{
 	max-width: 100%;
 }
 
+label{
+	font-family: 'lato', sans-serif;
+}
+
 .lato{
 
 	font-family: 'Lato', sans-serif;

@@ -6,9 +6,74 @@
  */
 
 module.exports = {
-
+  connection: 'mysql',
   attributes: {
-
+    id_usuario: {
+      type: 'integer',
+       unique: true,
+       autoIncrement: true
+    },
+    Nombre: {
+      type: 'string',
+      size: 45,
+      notNull: true,
+      required: true
+    },
+    Apellido: {
+      type: 'string',
+      size: 45,
+      notNull: true
+    },
+    Fecha_de_nacimiento: {
+      type: 'date',
+      notNull:true
+    },
+    Fecha_de_consulta: {
+      type: 'date'
+    },
+    Edad: {
+      type: 'integer'
+    },
+    Indentificador: {
+      type: 'boolean'
+    },
+    Correo: {
+      type: 'email',
+      email:true,
+      unique: true,
+      notNull:true
+    },
+    Alias: {
+      type: 'string',
+      size:45,
+      unique: true
+    },
+    Sexo: {
+      type: 'string',
+      size:45,
+    },
+    Latitud: {
+      type: 'float'
+    },
+    Longitud: {
+      type: 'float'
+    },
+    Presupuesto: {
+      type: 'float'
+    },
+      clave: {
+      type: 'string',
+      size:20,
+      required: true
+    },
+    pets: {
+      collection: 'Local',
+      via: 'owner'
+    },
+    pets: {
+      collection: 'Resena',
+      via: 'owner'
+    }
   }
 };
 
