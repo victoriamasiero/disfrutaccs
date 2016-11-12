@@ -1,11 +1,3 @@
-# disfrutaccsapp
-
-Integrantes:
-
-Miguel Moreton
-Rafael Concha
-Renato Fontanella
-Victoria Masiero
-
+# disfrutaccs
 
 a [Sails](http://sailsjs.org) application
