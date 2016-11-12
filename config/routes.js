@@ -39,6 +39,9 @@ module.exports.routes = {
     },
     '/login': {
     view: 'login'
+    },
+    '/plantilla': {
+    view: 'plantilla'
     }
 
   /***************************************************************************
