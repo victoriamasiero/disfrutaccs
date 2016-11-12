@@ -28,9 +28,6 @@ module.exports = {
       type: 'date',
       notNull:true
     },
-    Fecha_de_consulta: {
-      type: 'date'
-    },
     Edad: {
       type: 'integer',
     },
@@ -48,7 +45,7 @@ module.exports = {
       size:45,
       unique: true
     },
-      clave: {
+      Clave: {
       type: 'string',
       size:20,
       required: true

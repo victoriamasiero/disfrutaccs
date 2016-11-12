@@ -35,14 +35,18 @@ module.exports.routes = {
    '/': {
     view: 'inicio'},
     '/registro': {
-    view: 'registro'
+    view: 'usuario/registro'
     },
     '/login': {
     view: 'login'
     },
     '/plantilla': {
     view: 'plantilla'
+    },
+    '/registronatural': {
+    view: 'usuario/registronatural'
     }
+
 
   /***************************************************************************
   *                                                                          *

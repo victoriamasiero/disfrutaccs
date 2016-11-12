@@ -1,16 +1,14 @@
 
 module.exports = {
 	
-		registrar: function(req,res){
+	registrar: function(req,res){
 		res.view();
 	},
 
     create: function(req,res,next){
 
     Usuario.create(req.params.all(), function Usuariocreado (err, Usuario) {
-        if(err) {return next(err);}
-
-                
+        if(err) {return next(err);}  
           res.redirect ('/usuario/mostrar/'+ Usuario.id);
 
       });
