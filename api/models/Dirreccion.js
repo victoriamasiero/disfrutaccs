@@ -13,13 +13,8 @@ module.exports = {
     unique: true,
     autoIncrement: true
     },
-    latitud: {
-      type: 'float',
-      size:20,
-      required: true
-    },
-    longitud: {
-      type: 'float',
+    Codigo_postal: {
+      type: 'integer',
       size:20,
       required: true
     },

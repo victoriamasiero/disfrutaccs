@@ -45,7 +45,20 @@ module.exports.routes = {
     },
     '/registronatural': {
     view: 'usuario/registronatural'
-    }
+    },
+    '/perfilusuario': {
+    view: 'usuario/perfil'
+    },
+    '/registroactividad': {
+    view: 'actividad/registrar'
+    },
+    '/registrosubevento': {
+    view: 'subevento/registrar'
+    },
+    '/mostrarlocal': {
+    view: 'actividad/mostrar'
+    },
+
 
 
   /***************************************************************************

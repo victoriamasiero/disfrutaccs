@@ -29,10 +29,10 @@ module.exports = {
     Tipodelocal: {
       type: 'string'
     },
-    descripcion: {
+    Descripcion: {
       type: 'text'
     },
-    local: {
+    Local: {
       type: 'boolean'
     },
     owner: {

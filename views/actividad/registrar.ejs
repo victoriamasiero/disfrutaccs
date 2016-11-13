@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+ <!--Plantilla-->
+<nav>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Responsive Template #10 - large palm</title>
+<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Belgrano' rel='stylesheet' type='text/css'>
+<link href="css/styles.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-1.7.1.min.js"></script>
+<script src="js/jquery.flexslider-min.js"></script>
+<header>
+    <div class="headerContainer">   
+    <h1><img src="http://localhost:1337/images/Logo_peque%C3%B1o.jpg" alt="" class="boxPic shadowStyle"><a href="http://localhost:1337">Disfruta Caracas</a></h1>
+        <div id="navcontainer">
+            <ul id="navlist">
+                <li><a href="http://localhost:1337">Home</a></li>
+                <li id="active"><a href="http://localhost:1337/registro">Registar</a></li>
+                <li><a href="http://localhost:1337/consulta">Consultar</a></li>
+                <li><a href="http://localhost:1337/login">Mi perfil</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <br class="clearfloat" />
+</head>
+<body>
+</nav>
+
+
+  <form action="/Local/create" method="POST" >
+
+  <div align="center">
+
+
+  <h1 class="pacifico verde">Registro de Local</h1>
+  <hr>
+
+   <input type='hidden' name='owner' value='<%=Usuario.id%> ' >
+   <h2 class="lato mediano"> Local :  <b><%= Usuario.Nombre %> </b> </h2>
+
+   <br>
+
+   <label for="name" class="lato"> Nombre del local o evento </label >
+   <br/>
+   <input type="text" class="text-center lato" placeholder=" " name="Nombre" size="80" maxlength="80" >
+
+   <br/>
+   <br/>
+   
+   <label for="name" class="lato">Edad minima de ingreso</label >
+   <br/>
+   <input type="text" class="text-center" name="Edad_minima" size="20" maxlength="3" ><br />
+   <br/>
+   <br/>
+
+   <label for="name" class="lato">Precio base</label >
+   <br/>
+   <input type="text" class="text-center" placeholder=" " name="Preciobase" size="20" maxlength="45" />
+   
+   <br/>
+   <br/>
+
+   <label for="name" class="lato">Telefono</label ><br />
+   <input type="text" class="text-center" placeholder=" " name="" size="20" maxlength="45" />
+   <br/>
+   <br/>
+
+   
+ <label for="name" class="lato">Tipo de local o evento</label >
+ <br>
+ <br>
+ 
+   <input type="radio" class="lato" placeholder="Gastronomico" name="Tipodelocal" value="Gastronomico"/> Gastronomico
+   <br/>
+   <input type="radio" class="lato" placeholder="Entretenimiento" name="Tipodelocal" value="Entretenimiento"/> Entretenimiento
+
+  <br/>
+   <br/>
+
+
+   <label for="name" class="lato">Descripcion</label ><br />
+   <textarea name="Descripcion" class= "lato" placeholder= " " cols="40" rows="4"></textarea>
+    <br>
+    <br>
+
+   <label for="name" class="lato "> Ubicacion. El codigo postal de la ubicacion de tu local o evento </label >
+   <br/>
+   <br/>
+   <input type="int" class="text-center lato" placeholder="1070" name="Codigo postal" size="20" maxlength="20" ><br />
+   <br/>
+   <br/>
+
+   <label for="name" class="lato "> Es la opcion de Entretenimiento un local? </label >
+   <br/>
+    <input type="radio" class="lato" placeholder="Si" name="Local" value="true"/> Si
+   <br/>
+   <input type="radio" class="lato" placeholder="No" name="Local" value="false"/> No
+   <br/>
+   <br/>
+
+   <br/>
+
+   <div align = "center">
+   
+   <input type="submit" class="lato" value="Registrar Evento" action="/Actividad/registrar"> 
+  
+   </div>
+
+   <br/>
+  
+   <div>
+</form>
+</body>
+</html>

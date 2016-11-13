@@ -15,11 +15,10 @@ module.exports = {
     Puntos: {
       type: 'float'
     },
-    Latitud: {
-      type: 'float'
-    },
-    Longitud: {
-      type: 'float'
+    Codigo_postal: {
+      type: 'integer',
+      size:20,
+      required: true
     },
     Presupuesto: {
       type: 'float',
