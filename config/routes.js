@@ -34,8 +34,8 @@ module.exports.routes = {
 
    '/': {
     view: 'inicio'},
-    '/registro': {
-    view: 'usuario/registro'
+    '/registrar': {
+    view: 'usuario/registrar'
     },
     '/login': {
     view: 'login'

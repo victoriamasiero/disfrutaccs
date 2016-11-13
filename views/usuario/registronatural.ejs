@@ -16,9 +16,10 @@
     <div class="headerContainer">   
     <h1><img src="images/Logo_pequeño.jpg" alt="" class="boxPic shadowStyle"><a href="http://localhost:1337">Disfruta Caracas</a></h1>
         <div id="navcontainer">
+        <br class="clearfloat" />
             <ul id="navlist">
                 <li><a href="http://localhost:1337">Home</a></li>
-                <li id="active"><a href="http://localhost:1337/registro">Registar</a></li>
+                <li id="active"><a href="http://localhost:1337/usuario/registrar">Registar</a></li>
                 <li><a href="http://localhost:1337/consulta">Consultar</a></li>
                 <li><a href="http://localhost:1337/login">Mi perfil</a></li>
                 <li><a href="#">Contact</a></li>
@@ -32,23 +33,23 @@
 
 
 
-<form action="/Natural/create" method="POST" >
+<form action="/Usuario/create" method="POST" >
   <div align="center">
 
-  <h1 class="pacifico verde">Registrate tus preferencias</h1>
+  <h1 class="pacifico verde">Registra tus preferencias</h1>
   <hr>
   <br>
 
   <label for="name">Sexo</label ><br/>
     <br>
    <input type="radio" class="lato" placeholder="Masculino" name="Sexo" value="Masculino"/>Masculino
-   <br/>
    <input type="radio" class="lato" placeholder="Femenido" name="Sexo" value="Femenino"/>Femenino
-   <br/>
    <input type="radio" class="lato" placeholder="Otro" name="Sexo" value="Otro"/>Otro
    <br/>
    <br/>
    <br>
+
+
 
    <label for="name">Presupuesto</label ><br />
 
@@ -57,8 +58,10 @@
    <br>
    <label for="name">Codigo Postal donde te ecuentras</label >
    <br/>
-   <input type="int" class="text-center" placeholder="1070" name="Longitud" size="20" maxlength="20" ><br />
+   <input type="text" class="text-center" placeholder="1070" name="Codigo_postal" size="20" maxlength="20" ><br />
    <br/>
+   <label for="name">Ingrese nuevamente su clave</label ><br/>
+   <input type="password" class="text-center" placeholder="clave" name="clave" size="20" maxlength="20" ><br />
    <br/>
    <br/>
 
