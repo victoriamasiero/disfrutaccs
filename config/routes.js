@@ -55,9 +55,12 @@ module.exports.routes = {
     '/registrosubevento': {
     view: 'subevento/registrar'
     },
-    '/mostrarlocal': {
+    '/mostrarActividad': {
     view: 'actividad/mostrar'
     },
+    '/tarea2': {
+    view: 'tarea2'
+    }
 
 
 
