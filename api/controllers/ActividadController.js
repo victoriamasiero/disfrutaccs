@@ -66,7 +66,7 @@ module.exports = {
     },
 
     buscar: function(req,res,next){
-
+    
     Actividad.find({Nombre:{'contains':req.param('Nombre')} }).exec(function(err,resultado){
 
 

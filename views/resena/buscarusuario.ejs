@@ -40,11 +40,8 @@
 <h1 class="pacifico grande verde"> Esta seguro que desea publicar este comentario? </h1>
 <hr>
 
-<h4 class = "lato "> Id Actividad </h1>
-<input value= "<%=  Resena.idactividad %>" type="text" name="idactividad" class="lato text-center"><br />
-
-<h4 class = "lato "> Id usuario </h1>
-<input value= "<%=  Resena.id %>" type="text" name="idusuario" class="lato text-center"><br />
+<input type='hidden' name="idactividad" value='<%=  Resena.idactividad %>' >
+<input type='hidden' name="idusuario" value='<%=  Resena.id %>' >
 
 <h4 class = "lato "> Comentario </h1>
 <input value= "<%=  Resena.Comentario %>" type="text" name="Comentario" class="lato text-center"><br />

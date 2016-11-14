@@ -24,11 +24,14 @@ module.exports = {
 	},
 
 	crear: function(req,res,next){
-		 console.log(req.param('idusuario'));
+		 
    		 Natural.create(req.params.all(), function Usuariocreado (err, info) {
         	if(err) {return next(err);}  
-        
-          res.redirect('/');
+          Usuario.findOne({id:info.idusuario}).exec(function(err,resultado){
+
+            res.redirect('/usuario/perfil?Alias='+resultado.Alias+'&Clave='+resultado.Clave);
+          });
+          
 
       });
     },
@@ -47,11 +50,13 @@ module.exports = {
 
     update: function(req, res,next){
 
-    	console.log(req.params.all());
-        Natural.update(req.param('idusuairo'), req.params.all() , function preferenciaactualizada (err) {
+    	
+        Natural.update(req.param('idusuario'), req.params.all() , function preferenciaactualizada (err) {
         if(err) {return res.redirect('/');}
+        Usuario.findOne({id:req.param('idusuario')}).exec(function(err,resultado){
 
-        res.redirect ('/');
+            res.redirect('/usuario/perfil?Alias='+resultado.Alias+'&Clave='+resultado.Clave);
+          });
      });
     }
 
