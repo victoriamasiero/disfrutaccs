@@ -12,23 +12,20 @@ module.exports = {
             }
              else{
 
-                    if(req.param('Clave')!== resultado.clave){
+                    if(req.param('Clave')!== resultado.Clave){
                         res.notFound('clave incorrecta');
                     }
                     else{
-                            resultado.idlocal = req.param('idlocal');
+                            resultado.idactividad = req.param('idactividad');
                             resultado.Comentario = req.param('Comentario');
                             console.log(resultado);
 
                            res.view({Resena:resultado});
                     }
                 }
-
         });
 
     },
-
-
  	
     nueva: function(req,res,next){
 
@@ -36,7 +33,7 @@ module.exports = {
                             
                              if(err) {return next(err);}
 
-                             res.redirect ('/local/mostrar/'+resena.idlocal);
+                             res.redirect ('/actividad/mostrar/'+resena.idactividad);
                          });
 
              

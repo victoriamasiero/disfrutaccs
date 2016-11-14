@@ -1,12 +1,9 @@
- <!DOCTYPE html>
-
- <!--Plantilla-->
+<!DOCTYPE html>
 <nav>
 <html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free Responsive Template #10 - large palm</title>
 <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Belgrano' rel='stylesheet' type='text/css'>
 <link href="css/styles.css" rel="stylesheet" type="text/css" />
@@ -34,76 +31,37 @@
         <br class="clearfloat" />
 </header>
 <body>
+
+<nav class="se-gris padding-largo lato mediano">
+<ul class="no lista" id="no-lista">
+
+  <li  > <a href="http://localhost:1337/"> <b>DisfrutaCcs </b></a> </li>
+
+</ul>
 </nav>
 
 
-<body>
 <section>
-<div align="center">
+ <div class="text-center">
+    <h1 class="pacifico grande verde">Consultar Local</h1>
+    <hr>
+    <h2 class="lato"><i>Escriba el Nombre del Local</h2></p>
+    <br>
 
-<article>
-<div class="col-md-6 inline-block">
-<div align="center">
-<h1 class="pacifico grande verde"><b><%= Usuario.Alias %></b></h1>
-
-
-<hr>
-
-<h2 class="lato"> Nombre </h2>
-<h2 class="lato mediano"><b><%= Usuario.Nombre %></b></h2>
-
-<h2 class="lato"> Nombre de usuario </h2>
-
-<h2 class="lato mediano"> <b><%= Usuario.Alias %></b></h2>
-
-<h2 class="lato"> Correo </h2>
-
-<h2 class="lato mediano"> <b><%= Usuario.Correo %></b></h2>
+<form action="/Local/buscar/">
 
 <br>
-</div>
-</article>
 <br>
 
-<div align="center">
+<tr><td> <td><input type="text" name="Nombre" class="lato center-text">
+<br/>
+<br>
+<tr><td><td><input type="submit" value="Buscar" class="lato center-text">
 
-<article>
-<div class="col-md-6 inline-block">
-<div align="center">
+</form>
 
-<id="navcontainer">
-        <br class="clearfloat" />
-        <br class="clearfloat" />
-        <br class="clearfloat" />
-        <br class="clearfloat" />
-            <ul id="navlist">
-                
-                <li><a href="http://localhost:1337/Local/mislocales/">Ver Actividades Registradas</a></li><br>
-                <br>
-                <br>
-                <li><a href="http://localhost:1337/Actividad/registrar/?owner=<%=Usuario.id%>">Registrar Actividad</a></li><br>
-                <br>
-                <br>
-                <li><a href="http://localhost:1337/Usuario/editar/<%=Usuario.id%>">Editar Perfil</a></li><br>
-                <br>
-                <br>
-                <li><a href="http://localhost:1337/registronatural">Editar Información</a></li><br>
-            </ul>
-        </div>
+    <div class="col-md-6 inline-block">
 
-</div>
-</article>
 </section>
-</div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-

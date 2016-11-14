@@ -23,7 +23,7 @@ module.exports = {
     model:'Usuario'
     },
     
-    idlocal: {
+    idactividad: {
     model:'Actividad'
     }
 

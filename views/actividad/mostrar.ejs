@@ -73,22 +73,54 @@ th {
 
 <h2 class="lato "> Edad minima de ingreso: </h1>
 
-<h2 class = "lato mediano"> <b><%= Actividad.Edad_minima %></b></h1>
+<h2 class = "lato mediano"> <b><%= Actividad.Edad_minima %></b></h2>
 
 <h2 class="lato "> Precio Base: </h1>
 
 <h2 class = "lato mediano"> <b> BsF. <%= Actividad.Preciobase %></b></h1>
 
+<form action="/Resena/buscarusuario">
+<input type='hidden' name='idactividad' value='<%=Actividad.id%> ' >
 
+  <h2 class="lato "> Comentario: </h2>
+  <textarea name="Comentario" class= "lato" placeholder= "Deje su comentario aqui.." cols="30" rows="2"></textarea>
+  <br>
+  <br>
+  <input type='text' name='Nombre' placeholder= "Nombre de usuario" >
+  <input type="password" class = "text-center" placeholder="Clave" name="Clave" size="20" maxlength="8">
+  <br>
+  <br>
+  <input type="submit" value="Comentar">
+</form>
 </div>
 </article>
 
 
 <article>
-	
+  
   <div class="col-md-6 inline-block">
 
 
+<h5 class= "pacifico grande verde"> Reseñas </h5>
+<br>
+<table>
+<tr> 
+  <th class="lato text-center"> Nombre de usuario </th>
+  <th class="lato text-center"> Comentario </th>
+
+</tr>
+
+<%_.each (Actividad.Resenas, function(Resenas){ %>
+
+<tr data-id= "<%= Actividad.Resenas.id%>" data-model="Resena" >
+<td class="lato "><%= Resena.idusuario %></td>
+
+<td class="lato "><%= Resena.Comentario %></td>
+
+</tr>
+
+<% }) %>
+</table>
 
 
 </div>

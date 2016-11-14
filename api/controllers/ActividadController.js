@@ -17,7 +17,6 @@ module.exports = {
         
         Actividad.create(req.params.all(), function Actividadcreada (err, Actividad) {
         if(err) {return next(err);}
-        console.log(Actividad)
         res.redirect ('/actividad/mostrar/'+ Actividad.id);
         
 
@@ -29,12 +28,20 @@ module.exports = {
 
     Actividad.findOne({id: req.param('id')}).exec(function(err,resultado){
 
-    console.log(resultado)
     if (err) {return res.serverError(err);}
-    console.log(resultado);
-    res.view({Actividad:resultado});
 
-         
+    Resena.find({idactividad:resultado.id}).exec(function(err,resultadoresena){
+
+            if(resultadoresena === undefined){
+            return res.view({Actividad:resultado}); }
+            
+            else{
+
+                resultado.resenas = resultadoresena;
+                res.view({Actividad:resultado});}
+
+              
+         });
         
      });
     }
