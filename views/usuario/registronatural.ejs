@@ -36,12 +36,15 @@
 </nav>
 
 
-<form action="/Usuario/create" method="POST" >
+<form action="/Natural/create" method="POST" >
   <div align="center">
 
   <h1 class="pacifico verde">Ingresa tu información!</h1>
   <hr>
   <br>
+
+
+   <input type='hidden' name='idusuario' value='<%=datos.id%> ' >
 
   <label for="name">Sexo</label ><br/>
     <br>
@@ -61,13 +64,10 @@
    <br/>
    <input type="text" class="text-center" placeholder="1070" name="Codigo_postal" size="20" maxlength="20" ><br />
    <br/>
-   <label for="name">Ingrese nuevamente su clave</label ><br/>
-   <input type="password" class="text-center" placeholder="clave" name="clave" size="20" maxlength="20" ><br />
-   <br/>
    <br/>
 
    <div align = "center">
-   <input type="submit" class="lato" value="Guardar" action="/usuario/registrar"> 
+   <input type="submit" class="lato" value="Guardar" action="/Usuario/registrar"> 
   
    </div>
 

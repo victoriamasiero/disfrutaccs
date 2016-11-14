@@ -18,11 +18,9 @@ module.exports = {
     Presupuesto: {
       type: 'float'
     },
-    owner:{
-      model:'Usuario'
-    },
-    clave: {
-      type: 'string'
+    idusuario:{
+      model:'Usuario',
+      required: true
     }
   }
 };

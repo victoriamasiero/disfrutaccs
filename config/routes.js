@@ -43,9 +43,10 @@ module.exports.routes = {
     '/plantilla': {
     view: 'plantilla'
     },
-    '/registronatural': {
-    view: 'usuario/registronatural'
+    '/registronatural':{
+      view:'usuario/registronatural'
     },
+
     '/perfilusuario': {
     view: 'usuario/perfil'
     },

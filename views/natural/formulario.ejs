@@ -1,10 +1,12 @@
-<!DOCTYPE html>
-<html>
 
+<!DOCTYPE html>
+
+ <!--Plantilla-->
+<nav>
+<html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free Responsive Template #10 - large palm</title>
 <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Belgrano' rel='stylesheet' type='text/css'>
 <link href="css/styles.css" rel="stylesheet" type="text/css" />
@@ -22,50 +24,57 @@
         <br class="clearfloat" />
             <ul id="navlist">
                 <li><a href="http://localhost:1337/">Home</a></li>
-                <li id="active"><a href="http://localhost:1337/usuario/registrar">Registrar</a></li>
+                <li><a href="http://localhost:1337/usuario/registrar">Registrar</a></li>
                 <li><a href="http://localhost:1337/consulta">Consultar</a></li>
-                <li><a href="http://localhost:1337/login">Mi perfil</a></li>
+                <li id="active"><a href="http://localhost:1337/login">Mi perfil</a></li>
                 <li><a href="#">Tarea 2</a></li>
             </ul>
         </div>
 
         <br class="clearfloat" />
 </header>
-
 <body>
-
-<div align="center">
-
-<form action = "/Resena/nueva" method= "POST">
-<h1 class="pacifico grande verde"> Esta seguro que desea publicar este comentario? </h1>
-<hr>
-
-<h4 class = "lato "> Id Actividad </h1>
-<input value= "<%=  Resena.idactividad %>" type="text" name="idactividad" class="lato text-center"><br />
-
-<h4 class = "lato "> Id usuario </h1>
-<input value= "<%=  Resena.id %>" type="text" name="idusuario" class="lato text-center"><br />
-
-<h4 class = "lato "> Comentario </h1>
-<input value= "<%=  Resena.Comentario %>" type="text" name="Comentario" class="lato text-center"><br />
-
-<br>
-<input type="submit" value = "Aceptar" class="lato">
+</nav>
 
 
-</div>
+<form action="/Natural/update" method="POST" >
+  <div align="center">
+
+  <input type='hidden' name='idusuario' value='<%=datos.idusuario%>' >
+
+
+  <h1 class="pacifico verde">Ingresa tu información!</h1>
+  <hr>
+  <br>
+
+  <label for="name">Sexo</label ><br/>
+    <br>
+   <input type="radio" class="lato" placeholder="Masculino" name="Sexo" value="Masculino"/>Masculino
+   <input type="radio" class="lato" placeholder="Femenido" name="Sexo" value="Femenino"/>Femenino
+   <input type="radio" class="lato" placeholder="Otro" name="Sexo" value="Otro"/>Otro
+   <br/>
+   <br/>
+   <br>
+
+   <label for="name">Presupuesto</label ><br />
+
+   <input type="text" class="text-center" placeholder="Presupuesto" name='Presupuesto' value='<%= datos.Presupuesto %>' size="20" maxlength="45" />
+   <br>
+   <br>
+   <label for="name">Codigo Postal donde te ecuentras</label >
+   <br/>
+   <input type="text" class="text-center" placeholder="1070" name='Codigo_postal' value='<%= datos.Codigo_postal %>' size="20" maxlength="20" ><br />
+   <br/>
+   <br/>
+
+   <div align = "center">
+   <input type="submit" class="lato" value="Guardar" action="/Natural/update"> 
+  
+   </div>
+
+   <br/>
+</form>
 </body>
-</html>
-
-
-
-
-
-
-
-
-
-
 
 
 

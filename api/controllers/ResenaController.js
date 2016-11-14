@@ -32,7 +32,7 @@ module.exports = {
              Resena.create(req.params.all(), function Resenacreada (err, resena) {
                             
                              if(err) {return next(err);}
-
+                              console.log(resena);
                              res.redirect ('/actividad/mostrar/'+resena.idactividad);
                          });
 

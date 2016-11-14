@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="assets/styles/main.css">
+
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Pacifico" />
+
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+<title> DisfrutaCcs </title>
+
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+</style>
+
+</head>
+
+<body>
+
+<nav class="se-gris padding-largo lato mediano">
+<ul class="no lista" id="no-lista">
+
+  <li " > <a href="http://localhost:1337/"> <b>DisfrutaCcs </b></a> </li>
+
+</ul>
+</nav>
+
+  <div align="center">
+
+
+<h5 class= "pacifico grande verde"> Actividades </h5>
+<hr>
+<br>
+<table>
+<tr> 
+	<th class="lato text-center"> Nombre </th>
+	<th class="lato text-center"> Precio base </th>
+	<th class="lato text-center"> Edad minima </th>
+	<th class="lato text-center"> Detalles </th>
+
+</tr>
+
+<%_.each (Actividad, function(Actividad){ %>
+
+<tr data-id= "<%= Actividad.id%>" data-model="Actividad" >
+
+<td class="lato "><%= Actividad.Nombre %></td>
+
+<td class="lato "><%= Actividad.Preciobase %></td>
+
+<td class="lato "><%= Actividad.Edad_minima %></td>
+
+<td class="lato verde"><a href="/Actividad/mostrar/<%= Actividad.id %>"> Ver Actividad </a>></td>
+
+</tr>
+
+<% }) %>
+</table>
+
+
+
+</div>
+</body>
+</html>
