@@ -46,13 +46,17 @@ module.exports = {
       size:20,
       required: true
     },
-     preferenciass: {
+     preferencias: {
       collection:'Natural',
       via: 'idusuario'
     },
     pets: {
       collection: 'Actividad',
       via: 'owner'
+    },
+    Resena: {
+      collection: 'Resena',
+      via: 'idusuario'
     }
   } 
 };
