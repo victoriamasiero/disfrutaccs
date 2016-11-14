@@ -35,14 +35,15 @@
 </header>
 <body>
 </nav>
-<!--Fin de plantilla-->
-
 
 
 <body>
-
+<section>
 <div align="center">
-<h2 class= "lato"> <i> Perfil de usuario </i> </h2>
+
+<article>
+<div class="col-md-6 inline-block">
+<div align="center">
 <h1 class="pacifico grande verde"><b><%= Usuario.Alias %></b></h1>
 
 
@@ -60,26 +61,40 @@
 <h2 class="lato mediano"> <b><%= Usuario.Correo %></b></h2>
 
 <br>
-
-<br>
-<form action="/actividad/registrar/" >
-<tr><td><td><input type="submit" value="Registrar Local"></td></td></tr>
-<input type='hidden' value= "<%= Usuario.id %>" name='owner'>
-</form>
-<br>
-<form action="/Local/mislocales/" >
-<input type='hidden' value= "<%= Usuario.id %>" name='owner'>
-<tr><td><td><input type="submit" value="Mis locales"></td></td></tr>
-</form>
+</div>
+</article>
 <br>
 
-<form action="/Usuario/editar/<%=Usuario.id%>" >
+<div align="center">
 
-<tr><td><td><input type="submit" value="Editar perfil" class="lato"></td></td></tr>
-</form>
-<br>
+<article>
+<div class="col-md-6 inline-block">
+<div align="center">
 
+<id="navcontainer">
+        <br class="clearfloat" />
+        <br class="clearfloat" />
+        <br class="clearfloat" />
+        <br class="clearfloat" />
+            <ul id="navlist">
+                
+                <li><a href="http://localhost:1337/Local/mislocales/">Ver locales</a></li><br>
+                <br>
+                <br>
+                <li><a href="http://localhost:1337/actividad/registrar/">Registrar Actividad</a></li><br>
+                <br>
+                <br>
+                <li><a href="http://localhost:1337/Usuario/editar/<%=Usuario.id%>">Editar Perfil</a></li><br>
+                <br>
+                <br>
+                <li><a href="http://localhost:1337/registronatural">Editar Preferencias</a></li><br>
+            </ul>
+        </div>
 
+</div>
+</article>
+
+</section>
 </div>
 </body>
 </html>
