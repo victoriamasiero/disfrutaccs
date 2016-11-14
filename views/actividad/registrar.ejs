@@ -35,18 +35,16 @@
 <body>
 </nav>
 
-
-  <form action="/Local/create" method="POST" >
+  
+  <form action="/Actividad/create" method="POST" >
 
   <div align="center">
 
 
-  <h1 class="pacifico verde">Registro de Local</h1>
+  <h1 class="pacifico verde">Registro de Actividad</h1>
   <hr>
 
    <input type='hidden' name='owner' value='<%=Usuario.id%> ' >
-   <h2 class="lato mediano"> Local :  <b><%= Usuario.Nombre %> </b> </h2>
-
    <br>
 
    <label for="name" class="lato"> Nombre del local o evento </label >
@@ -88,7 +86,7 @@
 
 
    <label for="name" class="lato">Descripcion</label ><br />
-   <textarea name="Descripcion" class= "lato" placeholder= " " cols="40" rows="4"></textarea>
+   <textarea name="Descripcion" class= "lato" placeholder= " " name="Descripcion" cols="40" rows="4"></textarea>
     <br>
     <br>
 
@@ -106,17 +104,15 @@
    <input type="radio" class="lato" placeholder="No" name="Local" value="false"/> No
    <br/>
    <br/>
-
    <br/>
 
    <div align = "center">
    
-   <input type="submit" class="lato" value="Registrar Evento" action="/Actividad/registrar"> 
+   <input type="submit" class="lato" value="Registrar" action="/Actividad/registrar"> 
   
    </div>
 
    <br/>
-  
    <div>
 </form>
 </body>

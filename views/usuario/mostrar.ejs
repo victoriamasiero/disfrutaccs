@@ -26,9 +26,9 @@
         <br class="clearfloat" />
             <ul id="navlist">
                 <li><a href="http://localhost:1337/">Home</a></li>
-                <li id="active"><a href="http://localhost:1337/usuario/registrar">Registrar</a></li>
+                <li><a href="http://localhost:1337/usuario/registrar">Registrar</a></li>
                 <li><a href="http://localhost:1337/consulta">Consultar</a></li>
-                <li><a href="http://localhost:1337/login">Mi perfil</a></li>
+                <li id="active"><a href="http://localhost:1337/login">Mi perfil</a></li>
                 <li><a href="#">Tarea 2</a></li>
             </ul>
         </div>
@@ -80,13 +80,18 @@
 
 <br>
 
-<h2 class="lato"> Registra tus Preferencias para poder encontrar las mejores opciones de entretenimiento cerca de ti</h1>
+
 <id="navcontainer">
         <br class="clearfloat" />
+        <br class="clearfloat" />
+        
             <ul id="navlist">
-            	<li><a href="http://localhost:1337/registronatural">Preferencias</a></li>
+                
+                <li><a href="http://localhost:1337/usuario/perfil?Alias=<%= Usuario.Alias %>&Clave=<%= Usuario.Clave %>">Ver Perfil</a></li><br>
+               
             </ul>
-        </div>
+
+</div>
 
 
 
