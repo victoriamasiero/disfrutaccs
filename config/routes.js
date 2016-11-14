@@ -60,6 +60,9 @@ module.exports.routes = {
     },
     '/tarea2': {
     view: 'tarea2'
+    },
+    '/consulta': {
+    view: 'consulta'
     }
 
 
