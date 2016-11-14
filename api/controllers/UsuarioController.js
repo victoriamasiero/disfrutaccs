@@ -61,5 +61,12 @@ module.exports = {
     		)
         },
 
+
+    consultar: function(req,res){
+     res.view();
+    }
+
+
+
 };
 

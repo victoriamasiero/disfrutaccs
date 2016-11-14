@@ -8,11 +8,7 @@
 module.exports = {
   connection: 'mysql',
   attributes: {
-    id_usuario: {
-      type: 'integer',
-       unique: true,
-       autoIncrement: true
-    },
+    
     Nombre: {
       type: 'string',
       size: 45,
@@ -50,13 +46,17 @@ module.exports = {
       size:20,
       required: true
     },
-    pet: {
+     preferencias: {
       collection:'Natural',
-      via: 'owner'
+      via: 'idusuario'
     },
     pets: {
       collection: 'Actividad',
       via: 'owner'
+    },
+    Resena: {
+      collection: 'Resena',
+      via: 'idusuario'
     }
   } 
 };

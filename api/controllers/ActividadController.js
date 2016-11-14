@@ -30,21 +30,84 @@ module.exports = {
 
     if (err) {return res.serverError(err);}
 
-    Resena.find({idactividad:resultado.id}).exec(function(err,resultadoresena){
+             Resena.query('Select Alias, b.Comentario, b.id from Usuario inner join Resena b on Usuario.id = b.idusuario where b.idactividad='+resultado.id+';' , function(err, results) {
+             if (err) return res.serverError(err);
+             var string=JSON.stringify(results);
+             var json =  JSON.parse(string);
+
+
+             resultado.Resena = json;
+             console.log(resultado.Resena);
+             res.view({Actividad: resultado});
+             } );
+
+
+/*
+
+
+            Resena.find({idactividad:resultado.id}).exec(function(err,resultadoresena){
+            
 
             if(resultadoresena === undefined){
             return res.view({Actividad:resultado}); }
             
             else{
 
-                resultado.resenas = resultadoresena;
+                
+
+
+                resultado.Resena = resultadoresena;
                 res.view({Actividad:resultado});}
 
               
-         });
+         });*/
         
      });
+    },
+
+    buscar: function(req,res,next){
+    
+    Actividad.find({Nombre:{'contains':req.param('Nombre')} }).exec(function(err,resultado){
+
+
+
+    if (err) {return res.serverError(err);}
+
+    if(resultado !== undefined) {
+
+
+
+    console.log(resultado);
+    res.view({Actividad:resultado});
     }
+    if(resultado === undefined){
+    return res.notFound('Could not find, sorry.');}
+
+     });    
+    } ,
+
+    consultar: function(req,res){
+     res.view();
+    },
+
+    misactividades: function(req,res,next){
+        var id = req.param('id');
+        console.log(id);
+        if(id !== undefined){ Actividad.find({owner:id}).exec(function(err,resultado){
+    
+         if (err) {return res.serverError(err);}
+
+         if(resultado !== undefined) {
+             console.log(resultado);
+             res.view({Actividad:resultado});
+         }
+         if(resultado === undefined){return res.notFound('No hay locales con ese nombre :c ');}
+
+            });  
+        };
+
+    }
+
 	
 };
 

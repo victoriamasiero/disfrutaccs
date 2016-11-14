@@ -44,8 +44,8 @@ th {
         <br class="clearfloat" />
             <ul id="navlist">
                 <li><a href="http://localhost:1337/">Home</a></li>
-                <li id="active"><a href="http://localhost:1337/usuario/registrar">Registrar</a></li>
-                <li><a href="http://localhost:1337/consulta">Consultar</a></li>
+                <li><a href="http://localhost:1337/usuario/registrar">Registrar</a></li>
+                <li  id="active"><a href="http://localhost:1337/consulta">Consultar</a></li>
                 <li><a href="http://localhost:1337/login">Mi perfil</a></li>
                 <li><a href="#">Tarea 2</a></li>
             </ul>
@@ -110,10 +110,10 @@ th {
 
 </tr>
 
-<%_.each (Actividad.Resenas, function(Resenas){ %>
+<%_.each (Actividad.Resena, function(Resena){ %>
 
-<tr data-id= "<%= Actividad.Resenas.id%>" data-model="Resena" >
-<td class="lato "><%= Resena.idusuario %></td>
+<tr data-id= "<%= Actividad.Resena.id%>" data-model="Resena" >
+<td class="lato "><%= Resena.Alias %></td>
 
 <td class="lato "><%= Resena.Comentario %></td>
 

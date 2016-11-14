@@ -1,8 +1,6 @@
 <!DOCTYPE html>
-
- <!--Plantilla-->
-<nav>
 <html>
+
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,6 +13,27 @@
 <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 <script src="js/jquery-1.7.1.min.js"></script>
 <script src="js/jquery.flexslider-min.js"></script>
+<title> DisfrutaCcs </title>
+
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+</style>
+
 </head>
 <header>
     <div class="headerContainer">   
@@ -24,8 +43,8 @@
             <ul id="navlist">
                 <li><a href="http://localhost:1337/">Home</a></li>
                 <li><a href="http://localhost:1337/usuario/registrar">Registrar</a></li>
-                <li><a href="http://localhost:1337/consulta">Consultar</a></li>
-                <li id="active"><a href="http://localhost:1337/login">Mi perfil</a></li>
+                <li id="active"><a href="http://localhost:1337/consulta">Consultar</a></li>
+                <li ><a href="http://localhost:1337/login">Mi perfil</a></li>
                 <li><a href="#">Tarea 2</a></li>
             </ul>
         </div>
@@ -33,45 +52,49 @@
         <br class="clearfloat" />
 </header>
 <body>
+
+<nav class="se-gris padding-largo lato mediano">
+<ul class="no lista" id="no-lista">
+
+  <li " > <a href="http://localhost:1337/"> <b>DisfrutaCcs </b></a> </li>
+
+</ul>
 </nav>
 
-
-<form action="/Natural/create" method="POST" >
   <div align="center">
 
-  <h1 class="pacifico verde">Ingresa tu información!</h1>
-  <hr>
-  <br>
+
+<h5 class= "pacifico grande verde"> Actividades </h5>
+<hr>
+<br>
+<table>
+<tr> 
+	<th class="lato text-center"> Nombre </th>
+	<th class="lato text-center"> Precio base </th>
+	<th class="lato text-center"> Edad minima </th>
+	<th class="lato text-center"> Detalles </th>
+
+</tr>
+
+<%_.each (Actividad, function(Actividad){ %>
+
+<tr data-id= "<%= Actividad.id%>" data-model="Actividad" >
+
+<td class="lato "><%= Actividad.Nombre %></td>
+
+<td class="lato "><%= Actividad.Preciobase %></td>
+
+<td class="lato "><%= Actividad.Edad_minima %></td>
+
+<td class="lato verde"><a href="/Actividad/mostrar/<%= Actividad.id %>"> Ver Actividad </a>></td>
+
+</tr>
+
+<% }) %>
+</table>
 
 
-   <input type='hidden' name='idusuario' value='<%=datos.id%> ' >
 
-  <label for="name">Sexo</label ><br/>
-    <br>
-   <input type="radio" class="lato" placeholder="Masculino" name="Sexo" value="Masculino"/>Masculino
-   <input type="radio" class="lato" placeholder="Femenido" name="Sexo" value="Femenino"/>Femenino
-   <input type="radio" class="lato" placeholder="Otro" name="Sexo" value="Otro"/>Otro
-   <br/>
-   <br/>
-   <br>
-
-   <label for="name">Presupuesto</label ><br />
-
-   <input type="text" class="text-center" placeholder="Presupuesto" name="Presupuesto" size="20" maxlength="45" />
-   <br>
-   <br>
-   <label for="name">Codigo Postal donde te ecuentras</label >
-   <br/>
-   <input type="text" class="text-center" placeholder="1070" name="Codigo_postal" size="20" maxlength="20" ><br />
-   <br/>
-   <br/>
-
-   <div align = "center">
-   <input type="submit" class="lato" value="Guardar" action="/Usuario/registrar"> 
-  
-   </div>
-
-   <br/>
-</form>
+</div>
 </body>
 </html>
