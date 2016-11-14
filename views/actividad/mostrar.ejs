@@ -7,7 +7,6 @@
 <head>
 <style>
 table {
-
     border-collapse: collapse;
     width: 100%;
 }
@@ -54,7 +53,6 @@ th {
 
         <br class="clearfloat" />
 </header>
-<body>
 </nav>
 
 
@@ -82,23 +80,6 @@ th {
 <h2 class = "lato mediano"> <b> BsF. <%= Actividad.Preciobase %></b></h1>
 
 
-<form action="/resena/buscarusuario">
-<input type='hidden' name='idlocal' value='<%=Actividad.id%> ' >
-
-  <h2 class="lato"> Comentario: </h2>
-  <br>
-  <textarea name= "Comentario" class= "lato" placeholder= "Deje su comentario aqui.." cols="40" rows="4"></textarea>
-  <br>
-  <br>
-  <input type="text" class="text-center" placeholder="Nombre de usuario" name = "Nombre" size="10" maxlength="45" >
-
-  <input type="text" class="text-center espacio-derecha" placeholder="Clave" name = "Clave" size="10" maxlength="15" >
-  <br>
-
-  <br>
-  <input type="submit" value="Comentar">
-  <br>
-</form>
 </div>
 </article>
 

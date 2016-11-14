@@ -4,19 +4,20 @@ module.exports = {
 
 	    registrar: function(req,res){
 
-		Usuario.findOne(req.param('owner'), function encontraradmin (err, admin) {
+		Usuario.findOne(req.param('owner'), function encontraradmin (err, us) {
         if(err) {return next(err);}
-        
-        res.view({Usuario:admin});// ('/Local/mostrar/'+ Local.id);
+        console.log(us)
+        res.view({Usuario:us});// ('/Local/mostrar/'+ Local.id);
 
      });
 	},
+
 
     create: function(req,res,next){
         
         Actividad.create(req.params.all(), function Actividadcreada (err, Actividad) {
         if(err) {return next(err);}
-
+        console.log(Actividad)
         res.redirect ('/actividad/mostrar/'+ Actividad.id);
         
 
@@ -27,22 +28,12 @@ module.exports = {
     mostrar: function(req,res,next){
 
     Actividad.findOne({id: req.param('id')}).exec(function(err,resultado){
-    
+
+    console.log(resultado)
     if (err) {return res.serverError(err);}
+    console.log(resultado);
+    res.view({Actividad:resultado});
 
-
-    Resena.find({idlocal:resultado.id}).exec(function(err,resultadoresena){
-
-            if(resultadoresena === undefined){
-            return res.view({Actividad:resultado}); }
-            
-            else{
-
-                resultado.resenas = resultadoresena;
-                res.view({Actividad:resultado});}
-                });
-
-              
          
         
      });
