@@ -4,7 +4,7 @@ module.exports = {
 
     buscarusuario: function(req,res,next){
 
-
+        
         Usuario.findOne({Alias:req.param('Nombre')}).exec(function(err, resultado){
 
             if(resultado === undefined){

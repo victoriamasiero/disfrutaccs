@@ -1,4 +1,3 @@
-
 module.exports = {
   connection: 'mysql',
     attributes: {
@@ -39,7 +38,7 @@ module.exports = {
     },
     Resenas: {
       collection: 'Resena',
-      via:'idlocal'
+      via:'idactividad'
     } 
   }
 };
