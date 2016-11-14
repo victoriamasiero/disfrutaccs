@@ -14,6 +14,21 @@ module.exports = {
       });
     },
 
+    buscar: function(req,res,next){
+
+    Usuario.find({Alias:{'contains':req.param('Alias')} }).exec(function(err,resultado){
+    
+    if (err) {return res.serverError(err);}
+
+    if(resultado !== undefined) {
+    console.log(resultado);
+    res.view({Usuario:resultado});
+    }
+    if(resultado === undefined){
+    return res.notFound('Could not find, sorry.');}
+
+     });    
+    } ,
 
     mostrar: function(req,res,next){
     Usuario.findOne({id: req.param('id')}).exec(function(err,resultado){
