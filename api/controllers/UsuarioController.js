@@ -64,7 +64,7 @@ module.exports = {
 
     consultar: function(req,res){
      res.view();
-    }
+    },
 
     editar: function(req,res,next){
     Usuario.findOne({id: req.param('id')}).exec(function(err,resultado){
