@@ -2,7 +2,7 @@
 
 module.exports = {
 
-	    registrar: function(req,res){
+    registrar: function(req,res){
 
 		Usuario.findOne(req.param('owner'), function encontraradmin (err, us) {
         if(err) {return next(err);}
@@ -106,6 +106,29 @@ module.exports = {
             });  
         };
 
+    },
+
+    editar: function(req,res,next){
+
+    Actividad.findOne({id_a: req.param('id_a')}).exec(function(err,resultado){
+    if (err) {return res.serverError(err);}
+    
+    if(resultado !== undefined) {
+    res.view({Actividad:resultado});
+    }
+    if(resultado === undefined){
+    return res.notFound('Errooor');}
+        
+     });
+    },
+
+    actualizar: function(req, res,next){
+
+        Actividad.update(req.param('id'), req.params.all() , function Actividadactualizado (err) {
+        if(err) {return res.redirect('/Actividad/editar/'+req.param('id'));}
+
+        res.redirect ('/Actividad/mostrar/'+ req.param('id'));
+     });
     }
 
 	

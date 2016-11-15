@@ -66,6 +66,28 @@ module.exports = {
      res.view();
     }
 
+    editar: function(req,res,next){
+    Usuario.findOne({id: req.param('id')}).exec(function(err,resultado){
+    if (err) {return res.serverError(err);}
+    
+    if(resultado !== undefined) {
+    res.view({Usuario:resultado});
+    }
+    if(resultado === undefined){
+    return res.notFound('Errooor');}
+        
+     });
+    },
+
+    actualizar: function(req, res,next){
+
+        Usuario.update(req.param('id'), req.params.all() , function Usuarioactualizado (err) {
+        if(err) {return res.redirect('/Usuario/editar/'+req.param('id'));}
+
+        res.redirect ('/Usuario/mostrar/'+ req.param('id'));
+        
+     });
+    }
 
 
 };
