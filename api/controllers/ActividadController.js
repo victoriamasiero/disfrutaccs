@@ -114,7 +114,17 @@ module.exports = {
     } ,
 
     consultar: function(req,res){
-     res.view();
+
+        Actividad.query('select * from actividad;'
+            , function(err, actividades) {
+             if (err) return res.serverError(err);
+             var string=JSON.stringify(actividades);
+             var json =  JSON.parse(string);
+             var aux = json;
+                console.log(aux);
+             res.view({Actividad: aux});
+             });
+        
     },
 
     misactividades: function(req,res,next){

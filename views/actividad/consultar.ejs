@@ -35,7 +35,11 @@
 
 
 <section>
+
+<article>
+    <div class="col-md-6 inline-block">
  <div class="text-center">
+
     <h1 class="pacifico grande verde">Consultar Actividad</h1>
     <hr>
     <h2 class="lato"><i>Escriba el Nombre del Actividad</h2></p>
@@ -52,9 +56,43 @@
 <tr><td><td><input type="submit" value="Buscar" class="lato center-text">
 
 </form>
+</article>
 
+
+<article>
     <div class="col-md-6 inline-block">
 
+         <div class="text-center">
+
+    <h1 class="pacifico grande verde">Actividades</h1>
+<hr> 
+
+    <table>
+<tr> 
+    <th class="lato text-center"> Nombre </th>
+    <th class="lato text-center"> Precio base </th>
+    <th class="lato text-center"> Edad minima </th>
+    <th class="lato text-center"> Detalles </th>
+
+</tr>
+
+<%_.each (Actividad, function(Actividad){ %>
+
+<tr data-id= "<%= Actividad.id%>" data-model="Actividad" >
+
+<td class="lato "><%= Actividad.Nombre %></td>
+
+<td class="lato "><%= Actividad.Preciobase %></td>
+
+<td class="lato "><%= Actividad.Edad_minima %></td>
+
+<td class="lato verde"><a href="/Actividad/mostrar/<%= Actividad.id %>"> Ver Actividad </a>></td>
+
+</tr>
+
+<% }) %>
+</table>
+</article>
 </section>
 </body>
 </html>
