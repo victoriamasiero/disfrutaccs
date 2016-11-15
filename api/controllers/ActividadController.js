@@ -66,7 +66,34 @@ module.exports = {
     },
 
     buscar: function(req,res,next){
+
+            var letras = '%'+req.param('Nombre')+'%';
+            
     
+            Actividad.query('select * from actividad where (local = true AND nombre like \''+letras+'\');' , function(err, locales) {
+             
+             if (err) return res.serverError(err);
+             var string =JSON.stringify(locales);
+             var json =  JSON.parse(string);
+             var aux = json;
+             
+             console.log(aux);
+
+             Actividad.query('select * from actividad where (local = false AND nombre like \''+letras+'\');'
+            , function(err, eventos) {
+             if (err) return res.serverError(err);
+             var string=JSON.stringify(eventos);
+             var json2 =  JSON.parse(string);
+             aux.evento = json2;
+
+             console.log(aux.evento);
+             res.view({Actividad: aux});
+             });
+             
+             } );
+
+/*
+
     Actividad.find({Nombre:{'contains':req.param('Nombre')} }).exec(function(err,resultado){
 
 
@@ -83,7 +110,7 @@ module.exports = {
     if(resultado === undefined){
     return res.notFound('Could not find, sorry.');}
 
-     });    
+     });    */
     } ,
 
     consultar: function(req,res){

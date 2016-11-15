@@ -64,7 +64,7 @@ th {
   <div align="center">
 
 
-<h5 class= "pacifico grande verde"> Actividades </h5>
+<h5 class= "pacifico grande verde"> Locales </h5>
 <hr>
 <br>
 <table>
@@ -92,8 +92,37 @@ th {
 
 <% }) %>
 </table>
+<div align="center">
 
 
+<h5 class= "pacifico grande verde"> Eventos </h5>
+<hr>
+<br>
+<table>
+<tr> 
+    <th class="lato text-center"> Nombre </th>
+    <th class="lato text-center"> Precio base </th>
+    <th class="lato text-center"> Edad minima </th>
+    <th class="lato text-center"> Detalles </th>
+
+</tr>
+
+<%_.each (Actividad.evento, function(Actividad){ %>
+
+<tr data-id= "<%= Actividad.id %>" data-model="Actividad" >
+
+<td class="lato "><%= Actividad.Nombre %></td>
+
+<td class="lato "><%= Actividad.Preciobase %></td>
+
+<td class="lato "><%= Actividad.Edad_minima %></td>
+
+<td class="lato verde"><a href="/Actividad/mostrar/<%= Actividad.id %>"> Ver Actividad </a>></td>
+
+</tr>
+
+<% }) %>
+</table>
 
 </div>
 </body>
