@@ -61,6 +61,26 @@
 <h2 class="lato mediano"> <b><%= Usuario.Correo %></b></h2>
 
 <br>
+<br>
+        <table>
+<tr> 
+  <th class="lato text-center"> Nombre de actividad </th>
+  <th class="lato text-center"> Comentario </th>
+
+</tr>
+
+
+<%_.each (Usuario.Resena, function(Resena){ %>
+
+<tr data-id= "<%= Usuario.Resena.id%>" data-model="Resena" >
+<td class="lato "><%= Resena.Nombre %></td>
+
+<td class="lato "><%= Resena.Comentario %></td>
+
+</tr>
+
+<% }) %>
+</table>
 </div>
 </article>
 <br>
@@ -90,6 +110,8 @@
                 <li><a href="http://localhost:1337/Natural/editar/?id=<%=Usuario.id%>">Editar Información</a></li><br>
             </ul>
         </div>
+
+
 
 </div>
 </article>

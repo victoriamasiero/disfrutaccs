@@ -49,13 +49,27 @@ module.exports = {
     		if(resultado !== undefined ){
     			
     			if(resultado.clave === req.param('clave')){
-    			return res.view({Usuario:resultado});}
+
+                 Actividad.query('select actividad.Nombre, Resena.Comentario from actividad inner join Resena on actividad.id = resena.idactividad inner join usuario on resena.idusuario = usuario.id where usuario.id = '+resultado.id+';'
+                , function(err, eventos) {
+                if (err) return res.serverError(err);
+                var string=JSON.stringify(eventos);
+                var json =  JSON.parse(string);
+                resultado.Resena = json;
+                console.log(resultado.Resena);
+                res.view({Usuario: resultado});
+                });    
+
+
+
+
+
+    			/*return res.view({Usuario:resultado});*/}
 
     			else{return res.notFound('Clave invalida');}
 
     		}
-
-    		res.redirect ('/usuario/perfil/?Alias='+req.param('Alias')+'&clave='+req.param('clave'));
+            if(resultado === undefined){ res.redirect ('/usuario/perfil/?Alias='+req.param('Alias')+'&clave='+req.param('clave'));}
 
     			}
     		)

@@ -119,7 +119,7 @@ module.exports = {
 
     misactividades: function(req,res,next){
         var id = req.param('id');
-        console.log(id);
+        
         if(id !== undefined){ Actividad.find({owner:id}).exec(function(err,resultado){
     
          if (err) {return res.serverError(err);}
@@ -137,7 +137,7 @@ module.exports = {
 
     editar: function(req,res,next){
 
-    Actividad.findOne({id_a: req.param('id_a')}).exec(function(err,resultado){
+    Actividad.findOne({id: req.param('id')}).exec(function(err,resultado){
     if (err) {return res.serverError(err);}
     
     if(resultado !== undefined) {
