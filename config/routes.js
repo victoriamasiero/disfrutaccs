@@ -59,12 +59,18 @@ module.exports.routes = {
     '/mostrarActividad': {
     view: 'actividad/mostrar'
     },
-    '/tarea2': {
-    view: 'tarea2'
-    },
     '/consulta': {
     view: 'consulta'
-    }
+    },
+
+    '/tarea': {
+    view: 'tarea' 
+    },
+
+    '/tarea/:flag':'TareaController.consultar',
+
+
+
 
 
   /***************************************************************************
