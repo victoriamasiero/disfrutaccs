@@ -28,9 +28,7 @@
                 <li><a href="/">Home</a></li>
                 <li id="active"><a href="//usuario/registrar">Registrar</a></li>
                 <li><a href="/consulta">Consultar</a></li>
-
-                <li ><a href="//login">Mi perfil</a></li>
-
+                <li ><a href="/login">Mi perfil</a></li>
                 <li><a href="/tarea">Tarea 2</a></li>
             </ul>
         </div>
@@ -56,19 +54,19 @@
   <label for="name" class="lato"> Apellido</label >
   <br>
 
-   <input type="text" class="text-center" placeholder="Juan" name="Nombre" size="20" maxlength="45" >
-   <input type="text" class="text-center" placeholder="perez" name="Apellido" size="20" maxlength="45" >
+   <input title="Se necesita un nombre" type="text" class="text-center" placeholder="Juan" name="Nombre" size="20" maxlength="45" required/>
+   <input title="Se necesita un apellido" type="text" class="text-center" placeholder="perez" name="Apellido" size="20" maxlength="45" required/>
 
    <br/>
    <br/>
    
    <label for="name">Fecha de nacimiento</label ><br/>
-   <input type="date" class="text-center" name="Fecha_de_nacimiento"><br />
+   <input title="Se necesita una fecha de nacimiento" type="date" class="text-center" name="Fecha_de_nacimiento"><br required/>
 
    <br/>
 
     <label for="name">Edad</label ><br/>
-   <input type="int" class="text-center" name="Edad"><br />
+   <input type="number" class="text-center" name="Edad"><br />
    <br/>
 
    <script>
@@ -76,17 +74,17 @@
   </script>
  
 
-   <label for="name">Correo Electronico</label ><br/>
-   <input type="email" class="text-center" placeholder="juanperez@correo.com" name="Correo" size="20" maxlength="200" ><br />
+   <label for="name">Correo Electronico</label ><br required/>
+   <input title="Se necesita un correo valido" type="email" class="text-center" placeholder="juanperez@correo.com" name="Correo" size="20" maxlength="100" ><br required/>
    <br/>
 
    <label for="name">Alias</label ><br/>
-   <input type="text" class="text-center" placeholder="Rockpepe" name="Alias" size="20" maxlength="45" ><br />
+   <input title="Se necesita un alias" type="text" class="text-center" placeholder="Rockpepe" name="Alias" size="20" maxlength="45" ><br required/>
    
    <br/>
 
    <label for="name">clave</label ><br/>
-   <input type="password" class="text-center" placeholder="clave" name="Clave" size="20" maxlength="20" ><br />
+   <input title="Se necesita una contraseña" type="password" class="text-center" placeholder="clave" name="Clave" size="20" maxlength="20" ><br required/>
    <br/>
    <br/>
 
