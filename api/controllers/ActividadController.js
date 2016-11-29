@@ -17,10 +17,12 @@ module.exports = {
         
         Actividad.create(req.params.all(), function Actividadcreada (err, Actividad) {
         if(err) {return next(err);}
-        res.redirect ('/actividad/mostrar/'+ Actividad.id);
-        
-
      });
+
+     Dir_actividad.create(req.param.all), function Dircreada (err, Dir_actividad){
+         if(err){return next(err);}
+     }
+     res.redirect ('/actividad/mostrar/'+ Actividad.id);
     
     },
 
