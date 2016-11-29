@@ -7,11 +7,12 @@
 
 module.exports = {
   connection: 'mysql',
+  autoPK: false,
   attributes: {
-    id_e: {
+    id_aactividad: {
     type: 'integer'
     },
-    id_a: {
+    id_direccion: {
     type: 'integer'
     }
   }

@@ -9,10 +9,6 @@ module.exports = {
 
 connection: 'mysql',
   attributes: {
-    id_c: {
-    type: 'integer',
-    require:true
-    },
     id_u: {
     type: 'integer',
     require:true

@@ -8,7 +8,6 @@
 module.exports = {
   connection: 'mysql',
   attributes: {
-    
     Puntaje: {
       type: 'integer'
     },

@@ -8,14 +8,13 @@
 module.exports = {
     connection: 'mysql',
     attributes: {
-    id_t: {
-    type: 'integer',
-    required:true
-    },
     Numero_telefono: {
       type: 'integer',
       size:100,
       required: true
+    },
+    idactividad: {
+    model:'Actividad'
     }
   }
 };

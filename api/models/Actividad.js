@@ -1,11 +1,6 @@
 module.exports = {
   connection: 'mysql',
     attributes: {
-    id_a: {
-    type: 'integer',
-    unique: true,
-    autoIncrement: true
-    },
     Nombre: {
       type: 'string',
       size:100,
@@ -23,14 +18,11 @@ module.exports = {
     Preciobase: {
       type: 'float'
     },
-    Tipodelocal: {
-      type: 'string'
-    },
     Descripcion: {
       type: 'text'
     },
     Local: {
-      type: 'boolean'
+      type: 'boolean',
     },
     owner: {
     model:'Usuario'

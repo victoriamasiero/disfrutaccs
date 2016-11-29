@@ -8,10 +8,11 @@
 module.exports = {
   connection: 'mysql',
   attributes: {
-    id_e: {
+    autoPK: false,
+    id_subevento: {
     type: 'integer'
     },
-    id_se: {
+    id_direccion: {
     type: 'integer'
     }
   }

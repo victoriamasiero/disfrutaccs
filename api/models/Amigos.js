@@ -9,11 +9,6 @@ module.exports = {
 
   connection: 'mysql',
     attributes: {
-    id_amigo: {
-    type: 'integer',
-    unique: true,
-    autoIncrement: true
-    },
     id_u: {
       type: 'integer',
       required: true
