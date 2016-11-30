@@ -112,7 +112,7 @@ module.exports = {
     } ,
 
     consultar: function(req,res){
-
+        
             Actividad.query('select * from actividad;'
             , function(err, actividades) {
 
@@ -128,7 +128,7 @@ module.exports = {
              var string2 =JSON.stringify(masresenas);
              var json2 =  JSON.parse(string2);
              var aux2 = json2;
-             console.log(aux);
+             console.log("hollllllllllllllllllllllllllllaaa"+aux);
              console.log(aux2);
 
              res.view({Actividad: aux, mejores: aux2});

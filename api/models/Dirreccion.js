@@ -6,8 +6,8 @@
  */
 
 module.exports = {
-  connection: 'PostgresqlServer',
-    attributes: {
+ //connection: 'PostgresqlServer',
+     attributes: {
     Codigo_postal: {
       type: 'integer',
       size:20,

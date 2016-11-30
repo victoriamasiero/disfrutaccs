@@ -7,7 +7,7 @@
 
 module.exports = {
 
-  connection: 'PostgresqlServer',
+ //connection: 'PostgresqlServer',
     attributes: {
     id_u: {
       type: 'integer',

@@ -4,7 +4,7 @@
  */
 
 module.exports = {
-  connection: 'PostgresqlServer',
+  //connection: 'PostgresqlServer',
   
 
     attributes: {
