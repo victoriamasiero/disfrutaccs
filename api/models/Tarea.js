@@ -7,7 +7,7 @@
 
 module.exports = {
 
-  connection: 'sakila',
+  connection: 'PostgresqlServer',
 
   attributes: {
 

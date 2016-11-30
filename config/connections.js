@@ -41,21 +41,21 @@ module.exports.connections = {
   *                                                                          *
   ***************************************************************************/
 
-  mysql: {
+  /*mysql: {
      adapter: 'sails-mysql',
      host: 'localhost',
      user: 'root', //optional
-     password: '131296SchulzMORETON', //optional
-     database: 'mydb' //optional
+     password: '25840147', //optional
+     database: 'disfrutaccs' //optional
    },
 
   sakila: {
      adapter: 'sails-mysql',
      host: 'localhost',
      user: 'root', //optional
-     password: '131296SchulzMORETON', //optional
+     password: '25840147', //optional
      database: 'sakila' //optional
-   },
+   },*/
    
    
 
@@ -85,13 +85,13 @@ module.exports.connections = {
   *                                                                          *
   *                                                                          *
   ***************************************************************************/
-  // somePostgresqlServer: {
-  //   adapter: 'sails-postgresql',
-  //   host: 'YOUR_POSTGRES_SERVER_HOSTNAME_OR_IP_ADDRESS',
-  //   user: 'YOUR_POSTGRES_USER', // optional
-  //   password: 'YOUR_POSTGRES_PASSWORD', // optional
-  //   database: 'YOUR_POSTGRES_DB' //optional
-  // }
+   PostgresqlServer: {
+     adapter: 'sails-postgresql',
+     host: 'localhost',
+     user: 'postgres', // optional
+     password: '25840147', // optional
+     database: 'disfrutaccs' //optional
+   },
 
 
   /***************************************************************************

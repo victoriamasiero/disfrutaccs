@@ -2,7 +2,7 @@
 
 
 module.exports = {
-  connection: 'mysql',
+  connection: 'PostgresqlServer',
   attributes: {
     Sexo: {
       type: 'string',
