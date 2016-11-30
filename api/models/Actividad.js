@@ -4,7 +4,8 @@ module.exports = {
     Nombre: {
       type: 'string',
       size:100,
-      required: true
+      required: true,
+      unique:true,
     },
     Edad_minima: {
       type: 'integer'

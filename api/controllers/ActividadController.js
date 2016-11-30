@@ -16,7 +16,7 @@ module.exports = {
     create: function(req,res,next){
         
         Actividad.create(req.params.all(), function Actividadcreada (err, Actividad) {
-        if(err) {return next(err);}
+        if(err) {res.redirect ('/actividad/mostrar/'+ Usuario.id); return next(err);}
      });
 
      Dir_actividad.create(req.param.all), function Dircreada (err, Dir_actividad){
