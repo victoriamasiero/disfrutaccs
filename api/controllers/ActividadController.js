@@ -115,14 +115,30 @@ module.exports = {
 
     consultar: function(req,res){
 
-        Actividad.query('select * from actividad;'
+            Actividad.query('select * from actividad;'
             , function(err, actividades) {
+
+
+
+
              if (err) return res.serverError(err);
              var string=JSON.stringify(actividades);
              var json =  JSON.parse(string);
              var aux = json;
-                console.log(aux);
-             res.view({Actividad: aux});
+
+             Actividad.query('select actividad.id as id,actividad.nombre as nombre, count(resena.id) as r, actividad.Tipodelocal as tipo from actividad inner join resena on actividad.id = resena.idactividad where actividad.local = false group by nombre order by 4, 3 desc;',function(err,masresenas){
+             var string2 =JSON.stringify(masresenas);
+             var json2 =  JSON.parse(string2);
+             var aux2 = json2;
+             console.log(aux);
+             console.log(aux2);
+
+             res.view({Actividad: aux, mejores: aux2});
+
+             });
+
+
+
              });
         
     },

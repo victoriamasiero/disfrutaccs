@@ -56,6 +56,39 @@
 <tr><td><td><input type="submit" value="Buscar" class="lato center-text">
 
 </form>
+
+<hr>
+
+<h1 class="pacifico grande verde"> Eventos mas reseñados</h1>
+    <hr>
+
+
+ <table class="text-center" align="center">
+<tr> 
+    <th class="lato text-center"> Nombre </th>
+    <th class="lato text-center">  N reseñas </th>
+    <th class="lato text-center">  Tipo de local </th>
+    <th class="lato text-center">  detalles </th>
+</tr>
+
+<%_.each (mejores, function(mejores){ %>
+
+<tr data-id= "<%= mejores.id%>" data-model="Actividad" >
+
+<td class="lato "><%= mejores.nombre %></td>
+
+<td class="lato "><%= mejores.r %></td>
+
+<td class="lato "><%= mejores.tipo %></td>
+
+<td class="lato verde"><a href="/Actividad/mostrar/<%= mejores.id %>"> Ver Actividad </a>></td>
+
+</tr>
+
+<% }) %>
+</table>
+
+
 </article>
 
 
