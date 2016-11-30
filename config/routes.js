@@ -6,7 +6,7 @@
  *
  * If Sails receives a URL that doesn't match any of the routes below,
  * it will check for matching files (images, scripts, stylesheets, etc.)
- * in your assets directory.  e.g. `http://localhost:1337/images/foo.jpg`
+ * in your assets directory.  e.g. `//images/foo.jpg`
  * might match an image file: `/assets/images/foo.jpg`
  *
  * Finally, if those don't match either, the default 404 handler is triggered.
@@ -32,17 +32,21 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-   '/': {
+   '/':{
     view: 'inicio'},
+
     '/registrar': {
     view: 'usuario/registrar'
     },
+
     '/login': {
     view: 'login'
     },
+
     '/plantilla': {
     view: 'plantilla'
     },
+
     '/registronatural':{
       view:'usuario/registronatural'
     },
@@ -50,15 +54,19 @@ module.exports.routes = {
     '/perfilusuario': {
     view: 'usuario/perfil'
     },
+
     '/registroactividad': {
     view: 'actividad/registrar'
     },
+
     '/registrosubevento': {
     view: 'subevento/registrar'
     },
+
     '/mostrarActividad': {
     view: 'actividad/mostrar'
     },
+
     '/consulta': {
     view: 'consulta'
     },

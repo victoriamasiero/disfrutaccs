@@ -120,3 +120,4 @@ config/connections.js
 config/connections.js
 *.dockerignore
 node_modules/sails-mysql/README.md
+api/models/Dir_actividad.js

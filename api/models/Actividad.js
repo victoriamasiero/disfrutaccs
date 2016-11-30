@@ -3,15 +3,11 @@ module.exports = {
   
 
     attributes: {
-    id_a: {
-    type: 'integer',
-    unique: true,
-    autoIncrement: true
-    },
     Nombre: {
       type: 'string',
       size:100,
-      required: true
+      required: true,
+      unique:true,
     },
     Edad_minima: {
       type: 'integer'
@@ -25,14 +21,11 @@ module.exports = {
     Preciobase: {
       type: 'float'
     },
-    Tipodelocal: {
-      type: 'string'
-    },
     Descripcion: {
       type: 'text'
     },
     Local: {
-      type: 'boolean'
+      type: 'boolean',
     },
     owner: {
     model:'Usuario'

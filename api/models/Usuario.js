@@ -8,7 +8,6 @@
 module.exports = {
   connection: 'PostgresqlServer',
   attributes: {
-    
     Nombre: {
       type: 'string',
       size: 45,

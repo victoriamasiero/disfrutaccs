@@ -8,7 +8,9 @@ module.exports = {
     create: function(req,res,next){
 
     Usuario.create(req.params.all(), function Usuariocreado (err, Usuario) {
-        if(err) {return next(err);}  
+        if(err) 
+        {res.redirect ('/usuario/registrar');
+            return next(err);}  
           res.redirect ('/usuario/mostrar/'+ Usuario.id);
 
       });

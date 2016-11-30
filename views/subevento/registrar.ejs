@@ -19,15 +19,15 @@
 </head>
 <header>
     <div class="headerContainer">   
-    <h1><img src="http://localhost:1337/images/Logo_peque%C3%B1o.jpg" alt="" class="boxPic shadowStyle"><a href="http://localhost:1337/">Disfruta Caracas</a></h1>
+    <h1><img src="/images/Logo_peque%C3%B1o.jpg" alt="" class="boxPic shadowStyle"><a href="/">Disfruta Caracas</a></h1>
         <div id="navcontainer">
         <br class="clearfloat" />
             <ul id="navlist">
-                <li><a href="http://localhost:1337/">Home</a></li>
-                <li id="active"><a href="http://localhost:1337/usuario/registrar">Registrar</a></li>
-                <li><a href="http://localhost:1337/consulta">Consultar</a></li>
-                <li><a href="http://localhost:1337/login">Mi perfil</a></li>
-                <li><a href="#">Tarea 2</a></li>
+                <li><a href="/">Home</a></li>
+                <li id="active"><a href="/usuario/registrar">Registrar</a></li>
+                <li><a href="/consulta">Consultar</a></li>
+                <li><a href="/login">Mi perfil</a></li>
+                <li><a href="/tarea">Tarea 2</a></li>
             </ul>
         </div>
 
@@ -42,7 +42,7 @@
   <div align="center">
 
 
-  <h1 class="pacifico verde">Registro de Evento de Local</h1>
+  <h1 class="pacifico verde">Registro de Evento de Sub-Evento</h1>
   <hr>
 
    <input type='hidden' name='owner' value='<%=Actividad.id%> ' >
@@ -52,7 +52,7 @@
 
    <label for="name" class="lato"> Nombre del evento o promocion en tu local </label >
    <br/>
-   <input type="text" class="text-center lato" placeholder=" " name="Nombre" size="20" maxlength="45" >
+   <input type="text" class="text-center lato" placeholder=" " name="Nombre" size="20" maxlength="45" required>
 
    <br/>
    <br/>
@@ -69,13 +69,13 @@
    <br/>
 
      <label for="name" class="lato">Descripcion</label ><br />
-   <textarea name="Descripcion" class= "lato" placeholder= " " cols="40" rows="4"></textarea>
+   <textarea name="Descripcion" class= "lato" placeholder= " " cols="40" rows="4"></textarea required/>
     <br>
     <br>
 
     <label for="name" class="lato">Fecha cuando comienza </label >
    <br/>
-   <input type="date" class="text-center" name="Fecha_inicio" size="20" maxlength="3" ><br />
+   <input type="date" class="text-center" name="Fecha_inicio" size="20" maxlength="3" ><br required/>
    <br/>
    <br/>
 
@@ -88,13 +88,13 @@
    
    <label for="name" class="lato">Edad minima de ingreso</label >
    <br/>
-   <input type="text" class="text-center" name="Edad_minima" size="20" maxlength="3" ><br />
+   <input type="number" class="text-center" name="Edad_minima" size="20" maxlength="3" ><br />
    <br/>
    <br/>
 
    <label for="name" class="lato">Precio base para participar en dicho evento </label >
    <br/>
-   <input type="int" class="text-center" placeholder="bsf" name="Preciobase" size="20" maxlength="45" />
+   <input type="number" class="text-center" placeholder="bsf" name="Preciobase" size="20" maxlength="45" />
    
    <br/>
    <br/>
@@ -102,7 +102,7 @@
    <label for="name" class="lato "> Ubicacion. El codigo postal de la ubicacion de tu local o evento </label >
    <br/>
    <br/>
-   <input type="int" class="text-center lato" placeholder="1070" name="Codigo postal" size="20" maxlength="20" ><br />
+   <input type="number" class="text-center lato" placeholder="1070" name="Codigo postal" size="20" maxlength="20" ><br />
    <br/>
    <br/>
 
@@ -110,7 +110,7 @@
 
    <div align = "center">
    
-   <input type="submit" class="lato" value="Registrar actividad" action="/Actividad/registrar"> 
+   <input type="submit" class="lato" value="Registrar subactividad" action=""> 
   
    </div>
 

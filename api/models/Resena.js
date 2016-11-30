@@ -8,7 +8,6 @@
 module.exports = {
   connection: 'PostgresqlServer',
   attributes: {
-    
     Puntaje: {
       type: 'integer'
     },
