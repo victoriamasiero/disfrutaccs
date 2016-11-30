@@ -1,7 +1,7 @@
 /**
  * Categorias_preferidas.js
  *
- * @description :: TODO: You might write a short summary of how this model works and what it represents here.
+ * @description :: TODO: Tabla de union entre id de usuario y Categorias_preferidas (actualmente no en uso)
  * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
  */
 

@@ -1,7 +1,7 @@
 /**
  * Dir_actividad.js
  *
- * @description :: TODO: You might write a short summary of how this model works and what it represents here.
+ * @description :: TODO: Tabla de union entre el id de actividad y la direccion del mismo (actulamente no en uso)
  * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
  */
 
@@ -9,7 +9,7 @@ module.exports = {
   connection: 'mysql',
   autoPK: false,
   attributes: {
-    id_aactividad: {
+    id_actividad: {
     type: 'integer'
     },
     id_direccion: {
