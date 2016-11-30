@@ -27,7 +27,7 @@
             <ul id="navlist">
                 <li><a href="/">Home</a></li>
                 <li><a href="/usuario/registrar">Registrar</a></li>
-                <li id="active"><a href="//consulta">Consultar</a></li>
+                <li id="active"><a href="/consulta">Consultar</a></li>
                 <li ><a href="/login">Mi perfil</a></li>
                 <li><a href="/tarea">Tarea 2</a></li>
             </ul>
@@ -48,19 +48,19 @@
 <hr>
 
 <h4 class = "lato "> Nombre </h1>
-<input value= "<%=  Usuario.Nombre %>" type="text" name="Nombre" class="lato text-center"><br />
+<input value= "<%=  Usuario.Nombre %>" type="text" name="Nombre" size="20" maxlength="45" class="lato text-center"><br required/>
 
 <h4 class = "lato "> Apellido </h1>
-<input value= "<%=  Usuario.Apellido %>" type="text" name="Apellido" class="lato text-center"><br />
+<input value= "<%=  Usuario.Apellido %>" type="text" name="Apellido" size="20" maxlength="45" class="lato text-center"><br required/>
 
 <h4 class = "lato "> Correo </h1>
-<input value= "<%=  Usuario.Correo %>" type="text" name="Correo" class="lato text-center"><br />
+<input value= "<%=  Usuario.Correo %>" type="text" name="Correo" size="20" maxlength="45" class="lato text-center"><br required/>
 
 <h4 class = "lato "> Alias </h1>
-<input value= "<%=  Usuario.Alias %>" type="text" name="Alias" class="lato text-center"><br />
+<input title="Ingresa un Alias valido" value= "<%=  Usuario.Alias %>" type="text" name="Alias" size="20" maxlength="20" class="lato text-center"><br required/>
 
 <h4 class = "lato "> Clave </h1>
-<input value= "<%=  Usuario.Clave %>" type="text" name="Clave" class="lato text-center"><br />
+<input value= "<%=  Usuario.Clave %>" type="text" name="Clave" size="20" maxlength="20" class="lato text-center"><br required/>
 
 <br>
 <input type="submit" value = "Guardar Cambios" class="lato">
