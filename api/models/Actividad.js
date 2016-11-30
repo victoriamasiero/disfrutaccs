@@ -1,3 +1,8 @@
+ /*
+ * @description :: TODO: Modelo relacionado con las actividades tanto locales como eventos.
+ * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
+ */
+
 module.exports = {
   connection: 'PostgresqlServer',
   
@@ -23,6 +28,10 @@ module.exports = {
     },
     Descripcion: {
       type: 'text'
+    },
+    Categoria: {
+      type: 'String',
+      size:50
     },
     Local: {
       type: 'boolean',

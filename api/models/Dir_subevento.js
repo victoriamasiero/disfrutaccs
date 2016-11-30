@@ -1,7 +1,7 @@
 /**
  * Dir_subevento.js
  *
- * @description :: TODO: You might write a short summary of how this model works and what it represents here.
+ * @description :: TODO: Tabla de union entre id del sub-evento y dirrecion del mismo (actualmente no en uso)
  * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
  */
 
